@@ -17,6 +17,7 @@ public class ThreadActivity extends AppCompatActivity {
 //        myThread.start();
         Thread thread = new Thread( new ScreenChanger());
         thread.start();
+        System.out.println("Examle");
         textView = findViewById(R.id.textView5);
         Toast.makeText(this, "Wake Up", Toast.LENGTH_SHORT).show();
     }
