@@ -15,6 +15,9 @@ public class ThreadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_thread);
 //        MyThread myThread = new MyThread();
 //        myThread.start();
+
+
+
         Thread thread = new Thread( new ScreenChanger());
         thread.start();
         System.out.println("Examle");

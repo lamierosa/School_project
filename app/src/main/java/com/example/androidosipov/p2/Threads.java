@@ -22,6 +22,6 @@ public class Threads extends Thread {
         a.start();
         b.start();
         c.start();
-        System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");System.out.println("Main thread finished");
+        System.out.println("Main thread finished");
     }
 }
