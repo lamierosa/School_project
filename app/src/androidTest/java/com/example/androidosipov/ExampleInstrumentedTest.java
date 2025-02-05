@@ -1,4 +1,4 @@
-package com.example.School_projects;
+package com.example.androidosipov;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
