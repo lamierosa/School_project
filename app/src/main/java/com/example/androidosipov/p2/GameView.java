@@ -3,6 +3,7 @@ package com.example.androidosipov.p2;
 import android.content.Context;
 import android.graphics.*;
 import android.os.CountDownTimer;
+import android.view.MotionEvent;
 import android.view.View;
 import androidx.annotation.NonNull;
 import com.example.androidosipov.R;
@@ -29,8 +30,8 @@ public class GameView extends View {
         int a = b.getWidth() / 5;
         int c = b.getHeight() / 3;
         Rect start = new Rect(0, 0, a, c);
-        player = new Sprite(50,50,0,100,start,b);
-        enemy = new Sprite(-100,-100,-100,100,start,b2);
+        player = new Sprite(50,50,0,500,start,b);
+        enemy = new Sprite(-100,-100,-500,0,start,b2);
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 3; j++) {
                 if ((i == 0 && j == 0) || (i == 4 && j == 2)) {
@@ -51,6 +52,12 @@ public class GameView extends View {
         }
         Timer timer = new Timer();
         timer.start();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        player.setVelocityY(player.getVelocityY()*-1);
+        return super.onTouchEvent(event);
     }
 
     @Override
@@ -78,13 +85,20 @@ public class GameView extends View {
         public void onTick(long l) {
             player.update(pl-l);
             enemy.update(pl-l);
-            if (enemy.intersect(player)) {
+            boolean flag = enemy.intersect(player);
+            if (flag || enemy.getX() < -300) {
                 enemy.setX(w + enemy.getFrames().get(0).right);
-                enemy.setY((int) (Math.random() * h));
-                points -= 100;
+                enemy.setY((int) (Math.random() * (h - enemy.getFrameWidth())));
+                if (flag) {
+                    points -= 100;
+                }
             } else {
-                points += 9;
+                points += 1;
             }
+            if ((player.getY() < 0) || player.getY() > h - player.getFrameWidth()) {
+                player.setVelocityY(player.getVelocityY()*-1);
+            }
+            enemy.setVelocityX(-500 * (1 + points/1000));
             pl = l;
             invalidate();
         }
