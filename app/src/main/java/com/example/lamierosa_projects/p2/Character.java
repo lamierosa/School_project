@@ -1,4 +1,4 @@
-package com.example.androidosipov.p2;
+package com.example.lamierosa_projects.p2;
 
 public class Character {
     private String name;

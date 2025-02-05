@@ -1,4 +1,4 @@
-package com.example.androidosipov.p2;
+package com.example.lamierosa_projects.p2;
 
 import android.annotation.SuppressLint;
 import android.view.View;
