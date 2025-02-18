@@ -2,7 +2,7 @@ package com.example.androidosipov.p3;
 
 import java.util.Comparator;
 
-public class LastDigitComparator implements Comparator<Integer> {
+public class FirstDigitComparator implements Comparator<Integer> {
     @Override
     public int compare(Integer i1, Integer i2) {
         // Преобразуем числа в строки

@@ -12,7 +12,7 @@ public class Lessson4_1 {
         System.out.println(Arrays.equals(a,b));
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
-        Arrays.sort(a2, new LastDigitComparator());
+        Arrays.sort(a2, new FirstDigitComparator());
         System.out.println(Arrays.toString(a2));
         Arrays.sort(a2, 0, 9);
         System.out.println(Arrays.toString(a2));
