@@ -1,8 +1,10 @@
 package com.example.androidosipov.p4;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Lesson4_2 {
+
     public static void main(String[] args) {
         ArrayList<Integer> l = new ArrayList();
         l.add(1);
@@ -29,5 +31,15 @@ public class Lesson4_2 {
             System.out.print(next + " ");
         }
         System.out.println(l.size());
+
+        LinkedList<MyNode<String>> nodes = new LinkedList<>();
+
+        nodes.add(new MyNode<>("string"));
+        LinkedList<MyNode<String>> nodes2 = (LinkedList<MyNode<String>>) nodes.clone();
+        System.out.println(nodes.peekFirst());
+        nodes.get(0).setValue("string2");
+        System.out.println(nodes2.peekFirst());
+
+
     }
 }

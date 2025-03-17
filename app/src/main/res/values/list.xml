@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="forbes">
+        <item>Bill Gates</item>
+        <item>Jeff Besos</item>
+        <item>Anton Trifanov</item>
+        <item>Elisei Muzileev</item>
+        <item>Mark Zukerberg</item>
+    </string-array>
+
+    <string-array name="monthes">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+</resources>
