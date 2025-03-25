@@ -1,6 +1,7 @@
 package com.example.androidosipov.p4;
 
-public class MyNode<T> {
+public class MyNode<T> implements Comparable<MyNode<T>> {
+
     private T value;
     private MyNode<T> next;
 
@@ -23,4 +24,19 @@ public class MyNode<T> {
     public void setNext(MyNode<T> next) {
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        return "MyNode{" +
+                "value=" + value +
+                ", next=" + next +
+                '}';
+    }
+
+    @Override
+    public int compareTo(MyNode<T> t2) {
+        return this.getValue().toString()
+                .compareTo(t2.getValue().toString());
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.example.androidosipov.p4;
 
+import java.util.Comparator;
+
 public class MyMonth {
     private String m;
     private double t;
@@ -42,5 +44,24 @@ public class MyMonth {
 
     public void setL(boolean l) {
         this.l = l;
+    }
+
+    public static class MonthDayComparator implements Comparator<MyMonth> {
+
+        @Override
+        public int compare(MyMonth t1, MyMonth t2) {
+            return t1.d - t2.d;
+        }
+    }
+    public static class MonthTempComparator implements Comparator<MyMonth> {
+
+        @Override
+        public int compare(MyMonth t1, MyMonth t2) {
+            return (int) t1.t - (int)t2.t;
+        }
+    }
+
+    public String toString() {
+        return m + ":" + d + ":" + t;
     }
 }
